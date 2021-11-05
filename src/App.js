@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import SideBar from './components/SideBar/SideBar';
+import SearchPage from './components/SearchPage/SearchPage';
+import RecomendedVideos from './components/RecomendedVideos/RecomendedVideos';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {UploadvideoPage} from './components/UploadVideoPage/UploadVideoPage';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Router>
+      <Header/>
+
+        <Switch>
+          <Route path='/search/:searchTerm'>
+            <div className='AppPage '>
+              <SideBar/>
+              <SearchPage/>
+          </div>
+          </Route>
+
+          <Route exact path='/'>
+          <div className='AppPage'>
+          <SideBar/>
+          <RecomendedVideos/>
+          </div>
+          </Route>
+
+          <Route exact path='/uploadVideo'>
+
+              <UploadvideoPage/>
+          </Route>
+
+        </Switch>
+      </Router>
     </div>
   );
 }

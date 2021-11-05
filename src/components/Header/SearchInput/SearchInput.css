@@ -1,0 +1,19 @@
+.HeaderInput {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border: 1px solid lightgray;
+  padding: 2px 6px;
+}
+.HeaderInput > input,
+.inputItemSearch {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+.HeaderInputButton {
+  width: 50px !important;
+  background-color: #fafafa;
+  border-left: 1px solid lightgray;
+  color: gray;
+}

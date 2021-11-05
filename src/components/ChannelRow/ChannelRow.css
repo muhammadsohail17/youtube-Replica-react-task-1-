@@ -1,0 +1,23 @@
+.ChannelRow {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+.channelRowText {
+  display: flex;
+  flex-direction: column;
+}
+.channelRowText > p {
+  color: #606060;
+  font-size: small !important;
+}
+.channelRowText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ChannelRowLogo {
+  height: 120px !important;
+  width: 120px !important;
+  margin: 10px 60px;
+}
